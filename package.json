@@ -1,0 +1,96 @@
+{
+  "name": "ssr-react-boilerplate-rcs",
+  "version": "1.0.0",
+  "description": "SSR React boilerplate created by Roland Cseh https://github.com/Tigraqt",
+  "scripts": {
+    "clean": "rimraf public build ",
+    "build": "babel -d ./src/buildProd ./src/server",
+    "prod": "npm run clean && npm run build && NODE_ENV=production node --trace-deprecation src/buildProd/index.js",
+    "dev": "NODE_ENV=development babel-watch --watch src/server --watch webpack src/server/index.js",
+    "test": "jest --watch",
+    "lint": "eslint src"
+  },
+  "pre-commit": {
+    "run": "lint"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "SSR"
+  ],
+  "author": "Roland Cseh https://github.com/Tigraqt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tigraqt/SSR-React-Redux-Boilerplate.git"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.2.1",
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "brotli-webpack-plugin": "^1.0.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.4.0",
+    "express-static-gzip": "^1.1.3",
+    "file-loader": "^2.0.0",
+    "ignore-styles": "^5.0.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "normalize.css": "^8.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-hot-loader": "^4.3.11",
+    "react-redux": "^5.0.7",
+    "react-router-config": "1.0.0-beta.4",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "serialize-javascript": "^1.5.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-hot-server-middleware": "^0.5.0",
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "babel-watch": "^2.0.7",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2"
+  }
+}

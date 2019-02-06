@@ -1,0 +1,8 @@
+node_modules
+build
+src/buildProd
+public
+.vscode
+.idea
+.DS_Store
+.env

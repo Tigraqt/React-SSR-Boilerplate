@@ -1,0 +1,26 @@
+.wrapper{
+  display: flex;
+  background: #222;
+  height: 100vh;
+  padding: 0 3rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.content{ 
+  display: flex;
+  width: 50%;
+  align-items: center;
+
+  > div {
+    margin: auto;
+  }
+
+  ul {
+    padding: 0
+  }
+  
+  li {
+    list-style: none;
+    margin: 1rem 0;
+  }
+}
